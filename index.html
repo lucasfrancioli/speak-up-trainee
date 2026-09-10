@@ -3,63 +3,63 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&family=IBM+Plex+Mono:wght@500;600&display=swap">
 <style>
   :root{
-    --bg:#f6f2ea;
+    --bg:#faf7fd;
     --surface:#ffffff;
-    --surface-2:#eef0e9;
-    --ink:#193b34;
-    --ink-soft:#4f6b62;
-    --muted:#8aa39a;
-    --teal:#2f8f7e;
-    --teal-deep:#1c5c50;
-    --coral:#ff6a45;
-    --coral-deep:#d8481f;
-    --amber:#f2b53c;
-    --line:#d9d2c2;
+    --surface-2:#f1ebfa;
+    --ink:#241c38;
+    --ink-soft:#5b5170;
+    --muted:#93899f;
+    --purple:#6b3fa0;
+    --purple-deep:#3f2864;
+    --yellow:#ffcd3c;
+    --yellow-deep:#e0a800;
+    --on-accent:#2b1d43;
+    --line:#e3dcf0;
     --good:#2f8f5e;
     --good-bg:#e3f3e6;
     --retry-bg:#fdece3;
     --retry-ink:#a8431c;
-    --shadow: 0 18px 40px -22px rgba(25,59,52,.35);
+    --shadow: 0 18px 40px -22px rgba(63,40,100,.3);
   }
   @media (prefers-color-scheme: dark){
     :root:not([data-theme="light"]){
-      --bg:#0f2420;
-      --surface:#15342d;
-      --surface-2:#1b3d35;
-      --ink:#eef3ef;
-      --ink-soft:#b9cdc6;
-      --muted:#6f8f85;
-      --teal:#4fbfa8;
-      --teal-deep:#8ee0cd;
-      --coral:#ff8462;
-      --coral-deep:#ffab8f;
-      --amber:#f6c65c;
-      --line:#274a41;
+      --bg:#191330;
+      --surface:#241c3c;
+      --surface-2:#2c2249;
+      --ink:#f4f0fb;
+      --ink-soft:#c9bfe0;
+      --muted:#8779a8;
+      --purple:#ab8ad9;
+      --purple-deep:#ddccf3;
+      --yellow:#ffd84d;
+      --yellow-deep:#ffc61a;
+      --on-accent:#241333;
+      --line:#392a5c;
       --good:#7fd9a0;
-      --good-bg:#173f30;
+      --good-bg:#1c3f2c;
       --retry-bg:#3f2416;
       --retry-ink:#ffb491;
-      --shadow: 0 18px 40px -18px rgba(0,0,0,.55);
+      --shadow: 0 18px 40px -18px rgba(0,0,0,.6);
     }
   }
   :root[data-theme="dark"]{
-    --bg:#0f2420;
-    --surface:#15342d;
-    --surface-2:#1b3d35;
-    --ink:#eef3ef;
-    --ink-soft:#b9cdc6;
-    --muted:#6f8f85;
-    --teal:#4fbfa8;
-    --teal-deep:#8ee0cd;
-    --coral:#ff8462;
-    --coral-deep:#ffab8f;
-    --amber:#f6c65c;
-    --line:#274a41;
+    --bg:#191330;
+    --surface:#241c3c;
+    --surface-2:#2c2249;
+    --ink:#f4f0fb;
+    --ink-soft:#c9bfe0;
+    --muted:#8779a8;
+    --purple:#ab8ad9;
+    --purple-deep:#ddccf3;
+    --yellow:#ffd84d;
+    --yellow-deep:#ffc61a;
+    --on-accent:#241333;
+    --line:#392a5c;
     --good:#7fd9a0;
-    --good-bg:#173f30;
+    --good-bg:#1c3f2c;
     --retry-bg:#3f2416;
     --retry-ink:#ffb491;
-    --shadow: 0 18px 40px -18px rgba(0,0,0,.55);
+    --shadow: 0 18px 40px -18px rgba(0,0,0,.6);
   }
 
   *{box-sizing:border-box;}
@@ -90,6 +90,8 @@
     display:flex;
     align-items:center;
     justify-content:space-between;
+    flex-wrap:wrap;
+    row-gap:6px;
     gap:10px;
   }
   .brand{
@@ -101,7 +103,7 @@
     font-family:'Bebas Neue', sans-serif;
     font-size:1.5rem;
     letter-spacing:.04em;
-    color:var(--teal-deep);
+    color:var(--purple-deep);
   }
   .brand-tag{
     font-size:.7rem;
@@ -134,8 +136,8 @@
     transform:scale(1.12);
   }
   .brain-dot.current{
-    border-color:var(--coral);
-    box-shadow:0 0 0 3px color-mix(in srgb, var(--coral) 20%, transparent);
+    border-color:var(--yellow);
+    box-shadow:0 0 0 3px color-mix(in srgb, var(--yellow) 20%, transparent);
   }
 
   /* ---------- card ---------- */
@@ -151,7 +153,7 @@
   .card::before{
     content:"";
     position:absolute; inset:0 0 auto 0; height:5px;
-    background:linear-gradient(90deg, var(--teal), var(--amber) 55%, var(--coral));
+    background:linear-gradient(90deg, var(--purple-deep), var(--purple) 55%, var(--yellow));
   }
 
   .round-eyebrow{
@@ -159,7 +161,7 @@
     font-size:.72rem; text-transform:uppercase; letter-spacing:.14em;
     color:var(--muted); font-weight:700; margin-bottom:2px;
   }
-  .round-eyebrow .count{ color:var(--coral-deep); }
+  .round-eyebrow .count{ color:var(--purple); }
   h1.round-title{
     font-family:'Bebas Neue', sans-serif;
     font-size:2.1rem;
@@ -184,7 +186,7 @@
   .avatar{
     flex:none;
     width:38px;height:38px;border-radius:50%;
-    background:var(--teal-deep);
+    background:var(--purple-deep);
     color:var(--surface);
     display:flex;align-items:center;justify-content:center;
     font-family:'Bebas Neue',sans-serif;
@@ -207,29 +209,51 @@
     margin-top:10px;
     display:inline-flex; align-items:center; gap:6px;
     background:none;border:1px solid var(--line);
-    color:var(--teal-deep);
+    color:var(--purple-deep);
     font:inherit; font-weight:700; font-size:.78rem;
     padding:6px 11px; border-radius:99px; cursor:pointer;
     transition:border-color .2s ease, background .2s ease;
   }
-  .replay-btn:hover{ border-color:var(--teal); background:var(--good-bg); }
+  .replay-btn:hover{ border-color:var(--purple); background:var(--surface-2); }
   .replay-btn:disabled{ opacity:.5; cursor:default; }
   .replay-btn svg{ width:13px;height:13px; }
 
   /* mic control */
   .mic-zone{
+    position:relative;
     display:flex; flex-direction:column; align-items:center;
     gap:10px;
     padding:8px 0 4px;
   }
+  .particle{
+    position:absolute;
+    font-size:1.1rem;
+    pointer-events:none;
+    animation: particle-fly .7s ease-out forwards;
+  }
+  @keyframes particle-fly{
+    0%{ transform:translate(-50%,0) scale(.6); opacity:1; }
+    100%{ transform:translate(calc(-50% + var(--dx)), var(--dy)) scale(1); opacity:0; }
+  }
+  .feedback.good{ animation: feedback-pop .38s ease-out; }
+  .feedback.retry{ animation: feedback-shake .38s ease-out; }
+  @keyframes feedback-pop{ 0%{ transform:scale(.92); opacity:.4; } 60%{ transform:scale(1.03); } 100%{ transform:scale(1); opacity:1; } }
+  @keyframes feedback-shake{ 0%,100%{ transform:translateX(0); } 25%{ transform:translateX(-5px); } 75%{ transform:translateX(5px); } }
+  @media (prefers-reduced-motion: reduce){
+    .particle{ display:none; }
+    .feedback.good, .feedback.retry{ animation:none; }
+  }
+  .round-anim{ animation: content-in .4s cubic-bezier(.2,.8,.3,1); }
+  @keyframes content-in{ from{ opacity:0; transform:translateY(8px); } to{ opacity:1; transform:translateY(0); } }
+  @media (prefers-reduced-motion: reduce){ .round-anim{ animation:none; } }
   .mic-btn{
     position:relative;
     width:84px;height:84px;border-radius:50%;
     border:none; cursor:pointer;
-    background:linear-gradient(160deg, var(--coral), var(--coral-deep));
-    color:#fff;
+    background:linear-gradient(160deg, var(--yellow), var(--yellow-deep));
+    color:var(--on-accent);
     display:flex;align-items:center;justify-content:center;
-    box-shadow:0 12px 26px -10px color-mix(in srgb, var(--coral) 70%, transparent);
+    box-shadow:0 12px 26px -10px color-mix(in srgb, var(--yellow) 70%, transparent);
     transition:transform .15s ease;
   }
   .mic-btn:active{ transform:scale(.94); }
@@ -238,11 +262,11 @@
   .mic-btn.listening{ animation: pulse 1.1s ease-out infinite; }
   .mic-btn .ring{
     position:absolute; inset:0; border-radius:50%;
-    border:2px solid var(--coral);
+    border:2px solid var(--yellow);
     opacity:0;
   }
   .mic-btn.listening .ring{ animation: ring 1.1s ease-out infinite; }
-  @keyframes pulse{ 0%{box-shadow:0 12px 26px -10px color-mix(in srgb, var(--coral) 70%, transparent);} 50%{box-shadow:0 12px 26px -10px color-mix(in srgb, var(--coral) 95%, transparent), 0 0 0 10px color-mix(in srgb, var(--coral) 12%, transparent);} }
+  @keyframes pulse{ 0%{box-shadow:0 12px 26px -10px color-mix(in srgb, var(--yellow) 70%, transparent);} 50%{box-shadow:0 12px 26px -10px color-mix(in srgb, var(--yellow) 95%, transparent), 0 0 0 10px color-mix(in srgb, var(--yellow) 12%, transparent);} }
   @keyframes ring{ 0%{ transform:scale(1); opacity:.6; } 100%{ transform:scale(1.55); opacity:0; } }
   @media (prefers-reduced-motion: reduce){
     .mic-btn.listening, .mic-btn.listening .ring, .brain-dot{ animation:none !important; transition:none !important; }
@@ -255,7 +279,7 @@
   .transcript{
     font-family:'IBM Plex Mono', monospace;
     font-size:.85rem;
-    color:var(--teal-deep);
+    color:var(--purple-deep);
     background:var(--surface-2);
     border-radius:10px;
     padding:8px 12px;
@@ -286,7 +310,7 @@
     margin-top:12px;
     width:100%;
     border:none; border-radius:12px;
-    background:var(--teal-deep); color:#fff;
+    background:var(--purple-deep); color:var(--surface);
     font:inherit; font-weight:700; font-size:.95rem;
     padding:12px; cursor:pointer;
     display:none;
@@ -306,7 +330,7 @@
     color:var(--muted); text-decoration:underline; text-underline-offset:3px;
     padding:2px;
   }
-  .aux-link:hover{ color:var(--teal-deep); }
+  .aux-link:hover{ color:var(--purple-deep); }
 
   .hint-box{
     display:none;
@@ -338,7 +362,7 @@
   }
   .type-box button{
     border:none; border-radius:10px;
-    background:var(--teal); color:#fff;
+    background:var(--purple-deep); color:var(--surface);
     font:inherit; font-weight:700; font-size:.85rem;
     padding:0 16px; cursor:pointer;
   }
@@ -364,10 +388,10 @@
   }
   .start-btn{
     border:none; border-radius:14px;
-    background:var(--coral); color:#fff;
+    background:linear-gradient(160deg, var(--yellow), var(--yellow-deep)); color:var(--on-accent);
     font:inherit; font-weight:800; font-size:1rem;
     padding:14px 28px; cursor:pointer;
-    box-shadow:0 14px 28px -12px color-mix(in srgb, var(--coral) 60%, transparent);
+    box-shadow:0 14px 28px -12px color-mix(in srgb, var(--yellow) 60%, transparent);
   }
   .start-btn:hover{ filter:brightness(1.06); }
 
@@ -386,7 +410,7 @@
   .recap-list .tick{ color:var(--good); flex:none; }
   .score-line{
     font-family:'Bebas Neue', sans-serif;
-    font-size:1.6rem; color:var(--teal-deep);
+    font-size:1.6rem; color:var(--purple-deep);
     margin-top:16px;
   }
 </style>
@@ -423,7 +447,7 @@
       </div>
       <h1 class="round-title" id="roundContext">Traduza para o inglês:</h1>
 
-      <div class="bubble-row">
+      <div class="bubble-row" id="bubbleRow">
         <div class="avatar">Ms</div>
         <div class="bubble">
           <div class="en" id="teacherLine">Como se diz &ldquo;Obrigado&rdquo;?</div>
@@ -434,7 +458,7 @@
         </div>
       </div>
 
-      <div class="mic-zone">
+      <div class="mic-zone" id="micZone">
         <button class="mic-btn" id="btnMic" type="button" aria-label="Falar">
           <span class="ring"></span>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -579,6 +603,62 @@
   var recognition = null;
   var enVoice = null;
   var ptVoice = null;
+  var audioCtx = null;
+  var reducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function ensureAudioCtx(){
+    try{
+      if(!audioCtx){ audioCtx = new (window.AudioContext || window.webkitAudioContext)(); }
+      if(audioCtx.state === 'suspended'){ audioCtx.resume(); }
+      return audioCtx;
+    } catch(e){ return null; }
+  }
+
+  function playCorrectSound(){
+    var ctx = ensureAudioCtx(); if(!ctx) return;
+    var now = ctx.currentTime;
+    [660, 880, 1320].forEach(function(freq, i){
+      var o = ctx.createOscillator(), g = ctx.createGain();
+      o.type = 'sine'; o.frequency.value = freq;
+      var t = now + i * 0.09;
+      g.gain.setValueAtTime(0.0001, t);
+      g.gain.exponentialRampToValueAtTime(0.16, t + 0.02);
+      g.gain.exponentialRampToValueAtTime(0.0001, t + 0.24);
+      o.connect(g).connect(ctx.destination);
+      o.start(t); o.stop(t + 0.26);
+    });
+  }
+
+  function playRetrySound(){
+    var ctx = ensureAudioCtx(); if(!ctx) return;
+    var now = ctx.currentTime;
+    var o = ctx.createOscillator(), g = ctx.createGain();
+    o.type = 'sawtooth';
+    o.frequency.setValueAtTime(220, now);
+    o.frequency.exponentialRampToValueAtTime(130, now + 0.26);
+    g.gain.setValueAtTime(0.0001, now);
+    g.gain.exponentialRampToValueAtTime(0.13, now + 0.02);
+    g.gain.exponentialRampToValueAtTime(0.0001, now + 0.28);
+    o.connect(g).connect(ctx.destination);
+    o.start(now); o.stop(now + 0.3);
+  }
+
+  function burstParticles(){
+    if(reducedMotion) return;
+    var glyphs = ['✨','🎉','⭐'];
+    for(var i = 0; i < 6; i++){
+      var p = document.createElement('span');
+      p.className = 'particle';
+      p.textContent = glyphs[i % glyphs.length];
+      var angle = (Math.PI * 2 * i / 6) + (Math.random() * 0.4 - 0.2);
+      var dist = 46 + Math.random() * 24;
+      p.style.setProperty('--dx', (Math.cos(angle) * dist).toFixed(1) + 'px');
+      p.style.setProperty('--dy', (Math.sin(angle) * dist).toFixed(1) + 'px');
+      p.style.left = '50%'; p.style.top = '0';
+      el.micZone.appendChild(p);
+      (function(node){ setTimeout(function(){ node.remove(); }, 700); })(p);
+    }
+  }
 
   var el = {
     brainTrack: document.getElementById('brainTrack'),
@@ -591,8 +671,10 @@
     roundLabel: document.getElementById('roundLabel'),
     roundContext: document.getElementById('roundContext'),
     teacherLine: document.getElementById('teacherLine'),
+    bubbleRow: document.getElementById('bubbleRow'),
     btnReplay: document.getElementById('btnReplay'),
     btnMic: document.getElementById('btnMic'),
+    micZone: document.getElementById('micZone'),
     micCaption: document.getElementById('micCaption'),
     transcript: document.getElementById('transcript'),
     feedback: document.getElementById('feedback'),
@@ -678,6 +760,9 @@
     }
     state.awaitingNext = false;
     refreshBrainTrack();
+    el.bubbleRow.classList.remove('round-anim');
+    void el.bubbleRow.offsetWidth;
+    el.bubbleRow.classList.add('round-anim');
     setTimeout(function(){ speak(r.pt, 'pt-BR', ptVoice, 0.95, 1); }, 250);
   }
 
@@ -692,22 +777,25 @@
     el.transcript.textContent = rawText ? ('"' + rawText + '"') : '';
     var ok = r.accept.some(function(k){ return text.indexOf(k) !== -1; });
 
+    el.feedback.classList.remove('show','good','retry');
+    void el.feedback.offsetWidth; // restart animation
     el.feedback.classList.add('show');
     if(ok){
       state.score++;
       el.feedback.classList.add('good');
-      el.feedback.classList.remove('retry');
       el.feedbackIcon.textContent = '🎉';
       el.feedbackText.textContent = r.success;
       el.btnNext.classList.add('show');
       el.btnNext.textContent = (state.round === rounds.length-1) ? "Ver resultado →" : "Continuar →";
       state.awaitingNext = true;
       refreshBrainTrack();
+      playCorrectSound();
+      burstParticles();
     } else {
       el.feedback.classList.add('retry');
-      el.feedback.classList.remove('good');
       el.feedbackIcon.textContent = '🔁';
       el.feedbackText.textContent = r.retry;
+      playRetrySound();
     }
   }
 
